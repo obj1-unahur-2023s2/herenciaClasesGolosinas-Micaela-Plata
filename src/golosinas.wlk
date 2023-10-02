@@ -7,7 +7,7 @@ object vainilla { }
 object naranja { }
 object limon { }
 
-
+////
 class GolosinaSimple {
 	var peso
 	var precio
@@ -37,11 +37,33 @@ class BombonDuro inherits Bombon {
 }
 
 
+class CarameloRelleno inherits Caramelo {
+	override method mordisco() {
+		super()
+		sabor() = chocolate
+	}
+}
+
+class ObleasCrujientes inherits Oblea {
+	var cantMordiscos 
+	
+	override method mordisco() {
+		super()
+		if(self.estaDebil()) {
+			super()
+		else peso = peso -1
+			cantMordiscos = cantMordiscos +1
+		}
+		
+	}
+	
+	method estaDebil() = cantMordiscos > 3
+}
 
 
 
 
-
+////////
 
 
 
