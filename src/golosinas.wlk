@@ -8,6 +8,47 @@ object naranja { }
 object limon { }
 
 
+class GolosinaSimple {
+	var peso
+	var precio
+	var sabor
+	
+	method peso() { return peso }
+	
+	method precio() { return precio }
+	
+	method libreGluten() { return true }
+	
+	method sabor() {return sabor}
+}
+
+
+
+
+class Bombon inherits GolosinaSimple  (peso=15, precio=5, sabor=frutilla){
+	
+	method mordisco() { peso = peso * 0.8 - 1 }
+
+}
+
+class BombonDuro inherits Bombon {
+	method dureza() = if(peso >=12) 3 else if (peso.between(8,12) 2)
+	override method mordisco() (peso = peso - 1)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  * Golosinas
  */
